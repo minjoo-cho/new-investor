@@ -5,9 +5,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>부자따라 부자되기</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <!-- React와 ReactDOM 로드 -->
+  <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+  <!-- Babel 로드 (JSX 변환용) -->
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <!-- 아이콘 라이브러리 -->
+  <script src="https://unpkg.com/lucide-react@latest"></script>
+  <!-- 스타일시트 로드 -->
+  <link rel="stylesheet" href="src/index.css">
 </head>
 <body class="bg-gray-50">
   <div id="root"></div>
-  <script src="/src/index.jsx"></script>
+  
+  <!-- 데이터 파일 먼저 로드 -->
+  <script type="text/babel" data-type="module" src="src/data/investors.js"></script>
+  
+  <!-- 컴포넌트 로드 -->
+  <script type="text/babel" data-type="module" src="src/components/Medal.jsx"></script>
+  <script type="text/babel" data-type="module" src="src/components/Tooltip.jsx"></script>
+  <script type="text/babel" data-type="module" src="src/components/MetricBar.jsx"></script>
+  <script type="text/babel" data-type="module" src="src/components/InvestorCard.jsx"></script>
+  
+  <!-- 페이지 로드 -->
+  <script type="text/babel" data-type="module" src="src/pages/HomePage.jsx"></script>
+  <script type="text/babel" data-type="module" src="src/pages/DetailPage.jsx"></script>
+  
+  <!-- 메인 앱 파일 로드 -->
+  <script type="text/babel" data-type="module" src="src/App.jsx"></script>
+  <script type="text/babel" data-type="module" src="src/index.jsx"></script>
 </body>
 </html>
